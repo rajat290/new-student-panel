@@ -40,3 +40,27 @@ export interface Stat {
   label: string;
   value: string;
 }
+
+// New type definitions for Teachers feature
+export interface Teacher {
+  id: string;
+  name: string;
+  subject: string;
+  classes: string;
+  phone: string;
+  address: string;
+  email?: string;
+  profileImage?: string;
+}
+
+export interface SubjectTeacherMapping {
+  subject: string;
+  teachers: Teacher[];
+  studentCount: number;
+}
+
+export interface TeacherAssignment {
+  studentId: string;
+  subject: string;
+  teacherId: string;
+}
